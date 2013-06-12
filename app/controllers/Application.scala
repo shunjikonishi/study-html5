@@ -10,7 +10,7 @@ object Application extends Controller {
 	  
 	def index = Action {
 		val baseDir = new File("public/html5");
-		val list = baseDir.listFiles.map(new Chapter(_)).toList;
+		val list = baseDir.listFiles.sortBy(_.getName).map(new Chapter(_)).toList;
 		Ok(views.html.index(list))
 	}
 	
@@ -20,7 +20,7 @@ object Application extends Controller {
 		def list: List[String] = {
 			dir.listFiles(new FilenameFilter() {
 				def accept(file: File, name: String) = name.endsWith(".html");
-			}).map (_.getName).toList;
+			}).sortBy(_.getName).map (_.getName).toList;
 		}
 	}
 }
