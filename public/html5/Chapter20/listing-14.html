@@ -33,5 +33,19 @@
                 };
             }
         </script>
+    <pre style="background-color:#FAEBD7;border: solid 1px; padding-top: 10px; font-size:20px;">
+            //styleがないので代わりにJavaScriptをコピー
+            var buttons = document.getElementsByTagName("BUTTON");
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].onclick = function(e) {
+                    document.getElementById("toggle").style.display=
+                        e.target.innerHTML;
+                };
+            }
+    </pre>
+    <pre style="background-color:#E0FFFF; padding-top: 10px; font-size:20px;">
+ display:noneの例。
+ 非表示の要素のボックスは作成されない。
+    </pre>
     </body>
 </html>

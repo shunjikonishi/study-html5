@@ -54,5 +54,24 @@
                 };
             }
         </script>
+    <pre style="background-color:#FAEBD7;border: solid 1px; padding-top: 10px; font-size:20px;">
+            p.toggle {
+                float:left;
+                border: medium double black;
+                width: 40%;
+                margin: 2px;
+                padding: 2px;
+            }
+            
+            p.cleared {
+                clear:left;
+            }
+    </pre>
+    <pre style="background-color:#E0FFFF; padding-top: 10px; font-size:20px;">
+ デフォルトではfloat要素は積み上がっていくがclearを使用することでそれを解除できる。
+ 上の例では2番目の要素に「clear:left」が指定されているため隣ではなく下に表示されている。
+ floatを使用するとそのボックスは左上(または右上)に寄っていく。
+ 先に出現した要素から並ぶのでleftとrightでは並び順が異なる。
+    </pre>
     </body>
 </html>

@@ -36,5 +36,16 @@
                 };
             }
         </script>
+    <pre style="background-color:#FAEBD7;border: solid 1px; padding-top: 10px; font-size:20px;">
+            tr > th { text-align:left; background:gray; color:white}
+            tr > th:only-of-type {text-align:right; background: lightgray; color:gray}
+    </pre>
+    <pre style="background-color:#E0FFFF; padding-top: 10px; font-size:20px;">
+ visibilityで表示を制御するサンプル
+ - collapse:  要素は非表示となりその表示領域は詰められる
+ - hidden: 要素は非表示となるが、その表示領域は空白のまま残される
+ 
+ Chromeではcollapseは未実装。(display=noneで代用可能)
+    </pre>
     </body>
 </html>
