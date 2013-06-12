@@ -1,0 +1,12 @@
+@(list: List[controllers.Application.Chapter])
+
+@main("The Definitive Guide to HTML5 samples") {
+    <h1>The Definitive Guide to HTML5 samples</h1>
+    <ul>@list.map( c =>
+    	<li>{c.name}<br/>
+    		<ul>{c.list.map { f =>
+    			<li><a href={"/assets/html5/" + c.name + "/" + f}>{f}</a></li>
+    		}}</ul>
+    	</li>
+    )</ul>
+}
