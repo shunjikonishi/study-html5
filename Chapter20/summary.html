@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>20章のまとめ</title>
+	<meta name="author" content="Shunji Konishi"/>
+	<meta name="description" content="２０章のまとめ"/>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	
+<style type="text/css">
+body {
+	font-size: 20px;
+}
+</style>
+</head>
+<body>
+<h1>20章のまとめ</h1>
+<p>
+HTMLのBoxモデルは以下からなる
+</p>
+<ul>
+	<li>Content</li>
+	<li>Padding</li>
+	<li>Border</li>
+	<li>Margin</li>
+</ul>
+<p>
+displayではにはブロック要素とインライン要素の特徴をきちんと把握してレイアウトすることが重要<br>
+必要に応じてインラインブロックも使用する
+</p>
+<dl>
+<dt>ブロック要素</dt>
+<dd>
+	<ul>
+		<li>高さと幅を指定できる</li>
+		<li>高さと幅とも指定しない場合のデフォルトはauto</li>
+		<li>改行を伴う</li>
+		<li>vertical-alignは指定できない</li>
+	</ul>
+</dd>
+<dt>インライン要素</dt>
+<dd>
+	<ul>
+		<li>一連の文字列の一部を形成する</li>
+		<li>幅と高さは指定できない</li>
+		<li>vertical-alignが指定できる</li>
+	</ul>
+</dd>
+<dt>インラインブロック</dt>
+<dd>
+	<ul>
+		<li>一連の文字列の一部を形成する</li>
+		<li>幅と高さが指定できる</li>
+		<li>vertical-alignは使わない方が無難</li>
+	</ul>
+</dd>
+</dl>
+<p>
+box-sizingでwidthやheightに含める領域を指定できるが実装状況はブラウザによって異なる<br>
+(Firefoxではベンダープレフィクス「-moz-」が必要)
+</p>
+<p>
+てすとてすと<span style="display:inline;border: solid 1px; width:100px;height:100px;padding: 20px;vertical-align:middle;margin:20px;">てすと</span>てすと
+</p>
+</body>
+</html>
