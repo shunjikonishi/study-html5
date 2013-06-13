@@ -10,9 +10,9 @@ FLECT社内勉強会
 --------
 The Definitive Guide to HTML5
 
-- 書籍 http://www.amazon.co.jp/The-Definitive-Guide-HTML5-ebook/dp/B006LPJZFE
+- 書籍 http://amazon.co.jp/o/ASIN/B006LPJZFE
 - サンプルダウンロード http://www.apress.com/9781430239604
-- サイト http://flect-study-html5.herokuapp.com/
+- サイト http://shunjikonishi.github.io/study-html5/
 
 
 勉強会履歴
