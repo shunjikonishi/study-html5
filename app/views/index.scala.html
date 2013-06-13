@@ -1,7 +1,28 @@
 @(list: List[controllers.Application.Chapter])
-
 @main("The Definitive Guide to HTML5 samples") {
+<style>
+.multi-column {
+	height: 100%;
+	
+	column-count: 5;
+	column-fill: balance;
+	column-gap: 1.5em;
+	
+	-moz-column-count: 5;
+	-moz-column-fill: balance;
+	-moz-column-gap: 1.5em;
+	
+	-webkit-column-count: 5;
+	-webkit-column-fill: balance;
+	-webkit-column-gap: 1.5em;
+	
+	-ms-column-count: 5;
+	-ms-column-fill: balance;
+	-ms-column-gap: 1.5em;
+}
+</style>
     <h1>The Definitive Guide to HTML5 samples</h1>
+    <div class="multi-column">
     <ul>@list.map( c =>
     	<li>{c.name}<br/>
     		<ul>{c.list.map { f =>
@@ -9,4 +30,5 @@
     		}}</ul>
     	</li>
     )</ul>
+    </div>
 }
