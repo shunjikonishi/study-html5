@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Example</title>
+        <title>Aligning and Justifying Text</title>
         <meta name="author" content="Adam Freeman"/>
         <meta name="description" content="A simple example"/>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -79,25 +79,5 @@
 	<td>Justification is applied by elongating characters (applies only to cursive scripts).</td>
 </tr>
 </table>
-        <p>        
-            <button class="justify">auto</button>
-            <button class="justify">none</button>
-            <button class="justify">inter-word</button>
-            <button class="justify">inter-ideograph</button>
-            <button class="justify">inter-cluster</button>
-            <button class="justify">distribute</button>
-            <button class="justify">kashida</button>
-        </p>
-        <script>
-            var buttons2 = document.getElementsByClassName("justify");
-            for (var i = 0; i < buttons2.length; i++) {
-                buttons2[i].onclick = function(e) {
-                    document.getElementById("fruittext").style.textJustify =
-                        e.target.innerHTML;
-                //console.log(document.getElementById("fruittext").style.textJustify);
-                };
-            }
-        </script>
-
-    </body>
+   </body>
 </html>

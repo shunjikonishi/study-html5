@@ -14,12 +14,23 @@
                 float: left;
                 font-family: sans-serif;
                 font-size: medium;
+                /*
+                font-size: 10em;
+                */
             }
             #first {
                 font-size: xx-large;
             }
             #second {
                 font-size: larger;
+            }
+            h3 {
+                padding: 5px;
+                border: medium none black;
+                background-color: lightgrey;
+                margin: 2px;
+                font-family: sans-serif;
+                margin-top:10px;
             }
         </style>
     </head>
@@ -40,6 +51,34 @@
 	<td>Specifies the size of the font for a block of text</td>
 </tr>
 </table>
+
+<h3>分類</h3>
+<ul>
+	<li>
+		数値で指定
+		<ul>
+			<li>絶対値系：mm、cm、in、pt、pc</li>
+			<li>相対系：em、ex、px、rem</li>
+		</ul>
+	</li>
+	<li>％で指定</li>
+	<li>キーワードで指定</li>
+</ul>
+	
+<h3>よく迷う話（px か em か）</h3>
+<div style="white-space:pre-wrap">
+アクセシビリティを考慮して、相対指定が一般的
+pxが分かりやすいので使いたい、けど、IEだと固定化されるのでemを使う（ズームは大丈夫だが、文字のサイズ機能がダメ）
+
+emは親要素に対しての相対指定なので、同じ要素が入れ子になると、福利的に適用されてしまう
+→要素の構造によって適用が難しくなる
+　→CSS3では、ルートの要素に対する相対指定rem（root em）が使えるので、こちらの使用を検討してみる。
+</div>
+<a href="http://coliss.com/articles/build-websites/operation/css/font-size-with-rem-by-snook-ca.html">参考</a>
+
+	
+	
+</pre>
 
     </body>
 </html>
