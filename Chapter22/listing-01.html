@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Example</title>
+        <title>Aligning and Justifying Text</title>
         <meta name="author" content="Adam Freeman"/>
         <meta name="description" content="A simple example"/>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -26,21 +26,59 @@
             known for its apples.
         </p>
         <p>        
-            <button>Start</button>
-            <button>End</button>
-            <button>Left</button>
-            <button>Right</button>
-            <button>Justify</button>
-            <button>Center</button>
+            <button class="textalign">Start</button>
+            <button class="textalign">End</button>
+            <button class="textalign">Left</button>
+            <button class="textalign">Right</button>
+            <button class="textalign">Justify</button>
+            <button class="textalign">Center</button>
         </p>
         <script>
-            var buttons = document.getElementsByTagName("BUTTON");
+            //var buttons = document.getElementsByTagName("BUTTON");
+            var buttons = document.getElementsByClassName("textalign");
             for (var i = 0; i < buttons.length; i++) {
                 buttons[i].onclick = function(e) {
                     document.getElementById("fruittext").style.textAlign =
                         e.target.innerHTML;
+                //console.log(document.getElementById("fruittext").style.textAlign);
                 };
             }
         </script>
-    </body>
+
+てすと２
+<table border="1">
+<tr>
+	<th>Value</th>
+	<th>Description</th>
+</tr>
+<tr>
+	<td>auto</td>
+	<td>The browser will select the justification technique. This is the simplest approach,but it can lead to slight presentation differences between browsers.</td>
+</tr>
+<tr>
+	<td>none</td>
+	<td>Justification of the text is disabled.</td>
+</tr>
+<tr>
+	<td>inter-word</td>
+	<td>Spacing is distributed between words. This is suited to languages that use wordseparators, such as English.</td>
+</tr>
+<tr>
+	<td>inter-ideograph</td>
+	<td>Spacing is distributed between words and at inter-graphemic boundaries. This issuited to languages such as Japanese and Korean.</td>
+</tr>
+<tr>
+	<td>inter-cluster</td>
+	<td>Spacing is distributed between words and at grapheme cluster boundaries. This issuited to languages such as Thai.</td>
+</tr>
+<tr>
+	<td>distribute</td>
+	<td>Spacing is distributed between words and at grapheme cluster boundaries in all scripts except those that use connected or cursive styles.</td>
+</tr>
+<tr>
+	<td>kashida</td>
+	<td>Justification is applied by elongating characters (applies only to cursive scripts).</td>
+</tr>
+</table>
+   </body>
 </html>

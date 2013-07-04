@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Example</title>
+        <title>Decorating and Transforming Text</title>
         <meta name="author" content="Adam Freeman"/>
         <meta name="description" content="A simple example"/>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -9,8 +9,22 @@
             p {
                 border: medium double black;
                 background-color: lightgrey;
+                text-decoration: none;
+				/*
+                text-decoration: none;
+                text-decoration: underline;
+                text-decoration: overline;
                 text-decoration: line-through;
+                text-decoration: blink;
+				*/
+                text-transform: none;
+				/*
+                text-transform: none;
+                text-transform: capitalize;
                 text-transform: uppercase;
+                text-transform: lowercase;
+				*/
+				line-height:3em;
             }
         </style>
     </head>
@@ -24,5 +38,23 @@
             variety available in each country. I live near London, in an area which is
             known for its apples.
         </p>
+<table border="1">
+<tr>
+	<th>Property</th>
+	<th>Description</th>
+	<th>Values</th>
+</tr>
+<tr>
+	<td>text-decoration</td>
+	<td>Applies a decor to a block of text</td>
+	<td>none,underline,overline,line-through,blink</td>
+</tr>
+<tr>
+	<td>text-transform</td>
+	<td>Applies a transformation to a block of text</td>
+	<td>none,capitalize,uppercase,lowercase</td>
+</tr>
+</table>
+
     </body>
 </html>
