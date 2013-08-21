@@ -8,6 +8,62 @@
         <style>
             thead th, tfoot th { text-align:left; background:grey; color:white}
             tbody th { text-align:right; background: lightgrey; color:grey}
+
+            #sclTbl { /* スクロール対象のテーブル */
+                background-color: #fff;
+                border-collapse:separate;
+                font-size: 16px;
+            }
+
+            #out_Div {
+                position: relative; /* 相対位置 */
+                padding-top: 26px;
+                width: 480px;
+                border: 1px solid grey;
+                background-color: #fff;
+            }
+
+                #in_Div {/*スクロール対象*/
+                overflow: auto;
+                height: 200px; /* tbody高さ */
+            }
+
+            #sclTbl thead tr {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                background-color: #fff;
+            }
+
+            #sclTbl tfoot tr {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                background-color: #fff;
+            }
+
+            #sclTbl thead tr th{
+                background-color: gray;
+                color: #fff;
+                padding: 3px 0px;
+            }
+
+            #sclTbl tfoot tr th{
+                background-color: gray;
+                color: #fff;
+                padding: 3px 0px;
+            }
+
+            #sclTbl tbody tr td{
+                background-color: lightgrey;
+                color: gray;
+                padding: 3px 6px;
+            }
+
+            .coL0 { width: 30px; }
+            .coL1 { width: 100px; }
+            .coL2 { width: 120px; }
+
         </style>
     </head>
     <body>
@@ -35,5 +91,128 @@
                 </tr>
             </tbody>
         </table>
+
+        <pre style="background-color:#fff0f5; padding-top: 10px; font-size:20px;">
+・ブラウザに認識させるため、thead、tfoot、tbodyの順に記述する
+・定義することで異なるCSSを記述できるメリットがある
+・thead、tfootを固定し、tbodyのみスクロールさせることができる。※スマホでいまいち
+        </pre>
+
+	<div id="out_Div">
+	    <div id="in_Div">
+                <table id="sclTbl">
+		    <colgroup class="coL0"></colgroup>
+                    <colgroup class="coL1"></colgroup>
+                    <colgroup class="coL2"></colgroup>
+	            <colgroup class="coL1" span="2"></colgroup>
+
+                    <thead>
+                        <tr>
+                            <th class="coL0">Ｎo</th>
+			    <th class="coL1">都道府県</th>
+			    <th class="coL2">県庁所在地</th>
+			    <th class="coL1">人口</th>
+			    <th class="coL1">面積（ｋ㎡)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+			    <tr>
+                                <td>1</td>
+                                <td>北海道</td>
+                                <td>札幌市</td>
+                                <td>5,517,449</td>
+                                <td>78,420.61</td>
+                            </tr>
+			    <tr>
+                                <td>1</td>
+                                <td>北海道</td>
+                                <td>札幌市</td>
+                                <td>5,517,449</td>
+                                <td>78,420.61</td>
+                            </tr>
+			    <tr>
+                                <td>1</td>
+                                <td>北海道</td>
+                                <td>札幌市</td>
+                                <td>5,517,449</td>
+                                <td>78,420.61</td>
+                            </tr>
+			    <tr>
+                                <td>1</td>
+                                <td>北海道</td>
+                                <td>札幌市</td>
+                                <td>5,517,449</td>
+                                <td>78,420.61</td>
+                            </tr>
+			    <tr>
+                                <td>1</td>
+                                <td>北海道</td>
+                                <td>札幌市</td>
+                                <td>5,517,449</td>
+                                <td>78,420.61</td>
+                            </tr>
+			    <tr>
+                                <td>1</td>
+                                <td>北海道</td>
+                                <td>札幌市</td>
+                                <td>5,517,449</td>
+                                <td>78,420.61</td>
+                            </tr>
+			    <tr>
+                                <td>1</td>
+                                <td>北海道</td>
+                                <td>札幌市</td>
+                                <td>5,517,449</td>
+                                <td>78,420.61</td>
+                            </tr>
+			    <tr>
+                                <td>1</td>
+                                <td>北海道</td>
+                                <td>札幌市</td>
+                                <td>5,517,449</td>
+                                <td>78,420.61</td>
+                            </tr>
+			    <tr>
+                                <td>1</td>
+                                <td>北海道</td>
+                                <td>札幌市</td>
+                                <td>5,517,449</td>
+                                <td>78,420.61</td>
+                            </tr>
+			    <tr>
+                                <td>1</td>
+                                <td>北海道</td>
+                                <td>札幌市</td>
+                                <td>5,517,449</td>
+                                <td>78,420.61</td>
+                            </tr>
+			    <tr>
+                                <td>1</td>
+                                <td>北海道</td>
+                                <td>札幌市</td>
+                                <td>5,517,449</td>
+                                <td>78,420.61</td>
+                            </tr>
+			    <tr>
+                                <td>1</td>
+                                <td>北海道</td>
+                                <td>札幌市</td>
+                                <td>5,517,449</td>
+                                <td>78,420.61</td>
+                            </tr>
+                    </tbody>
+
+                    <tfoot>
+                            <tr>
+                                <th class="coL0">※</th>
+                                <th class="coL1">フッタ</th>
+                                <th class="coL2">フッタ</th>
+                                <th class="coL1">フッタ</th>
+                                <th class="coL1">フッタ</th>
+                            </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
     </body>
 </html>
